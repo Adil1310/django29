@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Course List Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>List of students</h1>
+        <ul class="list-group">
+            {% for student in students %}
+            <li class="list-group-item">{{ student.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <h1>List of courses</h1>
+        <ul class="list-group">
+            {% for course in courses %}
+            <li class="list-group-item">{{ course.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
